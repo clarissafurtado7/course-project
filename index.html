@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <title>thoughts and ideas</title>
+  <head>
+    <link rel="stylesheet" href="style.css">
+</head> 
+<div class="container">
+  <a href="ceiling.html">
+  <figure> <img class="nav" src="ceiling.png" id alt="A drawing of a dark ceiling, shown from the perspective of someone laying on the floor. In the top left corner, the edge of the door is visible with a triangle of light seeping in. In the center of the image, a light fixture with a smoke detector slightly below it are visible. The ceiling is a dark bluish black to signify that it is night." width="960" height="540"></figure>
+  </a>
+  <div class="container">
+    <a href="ocean.html">
+    <figure><img class="nav" src="shoreline-of-sand-and-ocean-1528418856.jpg" id alt="A drawing of ocean waves, white foam "></figure>
+    </a>
+    <div class="container">
+      <a href="storm.html">
+      <figure><img class="nav" src="rain.jpg" id alt=""></figure>
+      </a>
+      <div class="container">
+        <a href="train.html">
+        <figure><img class="nav" src="legs over ledge.jpg" id alt=""></figure>
+        </a>
+  </div>
+
+<script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+<script>
+    
+    function poem (){
+    //document.getElementById("click").disabled = true;
+    const instance = new TypeIt("#demo", {
+     speed: 40,
+     waitUntilVisible: true,
+    })
+      instance
+        .type(" I  <span class='out'>finish, I </span> could")
+        .move(".out", { to: "END" })
+        .delete(".out", { delay: 300 })
+        .move(null, { to: "END" })
+        .go();
+}
+</script>
+</html>
+

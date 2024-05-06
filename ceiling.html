@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <title>ceilings</title>
+   <head>
+    <link rel="stylesheet" href="style.css">
+</head> 
+<body id="ceiling">
+    <div id="anim">
+    <video id="vid" autoplay loop width="100%" height="100%">
+    
+        <source src="ceiling.mp4" type="video/mp4"/>
+    
+      </video>
+    </div>
+    <div id="container">
+        <div id="demo">
+
+        </div>
+    </div>
+<p id="para"></p>
+<div class="container">
+    <!--<img src="" alt="Snow">-->
+    <button id="start" class="button" onclick="urmom()"><span> start :) </span></button>
+    
+  </div> 
+  <div class="intital">
+    <button id="back" class="button" onclick="document.location='index.html'"><span> back </span></button>
+</div>
+  <audio volume="1.0">
+    <source id="background" src="background for ceiling.mp3" type="audio/mpeg">
+    <source id="door" src="door-close.mp3" type="audio/mpeg">
+    <source id="music" src="" type="audio/mpeg">
+  </audio>
+</body>
+<script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.js"></script>
+<script>
+    vid.style.display = "none";
+    function showCoords(event) {
+        let x = event.clientX;
+        let y = event.clientY;
+        if(x<=345 & y<=145){
+            sound();
+        }
+  
+    }
+    var door = document.getElementById("door");
+    function urmom() {
+            //have them click a play button for audio
+            var x = document.getElementById("start");
+            x.style.display = "none";
+            var y = document.getElementById("vid");
+            vid.style.display = "inline";
+            sound("background for ceiling.mp3", true, true, 0.25);
+            const instance = new TypeIt("#demo", {
+                speed: 60,
+                waitUntilVisible: true,
+            })
+            instance
+                .type("my ceiling in the dark ")
+                .pause(102)
+                .break()
+                .type("light streams through the open window, dim ")
+                .pause(292)
+                .break()
+                .type("you can hear quiet breathing, occasional noises from outside, ")
+                .pause(103)
+                .break()
+                .type("but other than that it's quiet, ")
+                .pause(260)
+                .break()
+                .type("silent<br>")
+                .pause(1000)
+                .break()
+                .type("there's something scary about the silence")
+                .pause(100)
+                .type("<br>peaceful, too, but to be alone with your thoughts like that")
+                .pause(380)
+                .type("<br>eventually the silence gets loud")
+                .pause(500)
+                .type("<br>sit with it, long enough, and it's like something is pressing down on your chest")
+                .pause(200)
+                .type("<br>there's a buzzing in your ears, and it builds to a high pitched")
+                .pause(160)
+                .type("<br>noise so overwhelming you can hardly stand it")
+                .pause(400)
+                .type("<br>your lungs get tight, and everything closes in, and then-   ")
+                .go();
+                //sound("door-close.mp3", false, false, 1.0);
+             /*   const instance2 = new TypeIt("#demo", {
+                speed: 60,
+                waitUntilVisible: true,
+            })*/
+                instance
+                .pause(1000)
+                .type("<br>and then it's back to the way things are")
+                .pause(230)
+                .type("<br>calm but not quiet")
+                .pause(290)
+                .type("<br>never quiet")
+                .pause(260)
+                .go();
+/*<br>theres something scary about the silence
+    <br>peaceful, too, but to be alone with your thoughts like that
+    <br>eventually the silence gets loud
+    <br>sit with it, long enough, and it's like something is pressing down on your chest
+    <br>theres a buzzing in your ears, and it builds to a high pitched <br>noise so overwhelming you can hardly stand it
+    <br>your lungs get tight, and everything closes in, and then- 
+    door.play();
+    [the background fades and music or something comes on]
+    <br>and then its back to the way things are
+    <br>calm but not quiet
+    <br>never quiet"*/
+            //onclick, play audio of a door closing
+            
+                
+        }
+        var x = document.getElementById("background");
+        function sound(name, autoplay, loop, volume){
+            var sound = new Howl({
+                src: [name],
+                autoplay: autoplay,
+                loop: loop,
+                volume: volume,
+            });
+            sound.play();
+        }
+</script>
+
+</html>
+
+
+

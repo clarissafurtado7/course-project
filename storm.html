@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <title>thunderstorms</title>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head> 
+    <body id="rain">
+    <div id="anim">
+        <video id="vid" autoplay loop width="100%" height="100%">
+        
+            <source src="rain.mp4" type="video/mp4"/>
+        
+          </video>
+        </div>
+    <div class="container">
+        <button id="start" class="button" onclick="urmom()"><span> Start :) </span></button>
+      </div> 
+    <div class="intital">
+        <button id="back" class="button" onclick="document.location='index.html'"><span> back </span></button>
+    </div>
+<script>
+    vid.style.display = "none";
+    function urmom(){
+            var x = document.getElementById("start");
+            x.style.display = "none";
+            var y = document.getElementById("vid");
+            vid.style.display = "inline";
+    }
+
+    /*.type("stars have always been an important motif in my life. <br>as a child, my family watched तारे ज़मीन पर, like stars on earth. <br>my mother would always cry at it. <br>how ironic, then, when her own child struggled and fucked up, <br>all she had were anger and harsh words.")
+                .pause(260)
+                .type("<br>ironic, but not surprising. <br>that's all my mother had ever had for me. <br>anger, screams and yelling, and then tearful apologies, pleading that <br>she didn't mean it. she never did. <br>and yet, my childhood is marred with the scars of her words. <br>she would've been more like the father in that movie, if anything, <br>with anger, and yelling, as if all that was missing in your child <br>was the pain you could inflict. i always think my parents never ")
+                .pause(260)
+                .type("<br>really understood that movie, despite their love for it. <br>ishaan had other talents, that's what the story tells us. <br>he may not have been good at school, but he just needed someone to believe in him, <br>and what he <i>was</i> good at. my parents watched the same movie i did, <br>my mother cried when ishaan was sent away to boarding school, <br>refused to speak, and in the same breath, yelled horrible things. <br>it's painful to think that my mother could empathize with a <br>little indian kid she'd never met, a kid who wasn't even real, <br>and ignore the kid right in front of her.")*/
+</script>
+</body>
+</html>
+
