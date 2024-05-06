@@ -1,6 +1,5 @@
 # course-project
 final course project for digital poetry
-link: https://clarissafurtado7.github.io/course-project/
-
+<a href="https://clarissafurtado7.github.io/course-project/" target="_blank" rel="noopener">link to site :)</a>
 ## Project Statement:
 
