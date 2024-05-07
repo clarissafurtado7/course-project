@@ -8,7 +8,7 @@
     <div id="anim">
     <video id="vid" autoplay loop width="100%" height="100%">
     
-        <source src="ceiling.mp4" type="video/mp4"/>
+        <source src="resources\ceiling.mp4" type="video/mp4"/>
     
       </video>
     </div>
@@ -27,7 +27,7 @@
     <button id="back" class="button" onclick="document.location='index.html'"><span> back </span></button>
 </div>
   <audio volume="1.0">
-    <source id="background" src="background for ceiling.mp3" type="audio/mpeg">
+    <source id="background" src="resources\background for ceiling.mp3" type="audio/mpeg">
     <source id="door" src="door-close.mp3" type="audio/mpeg">
     <source id="music" src="" type="audio/mpeg">
   </audio>
@@ -51,7 +51,7 @@
             x.style.display = "none";
             var y = document.getElementById("vid");
             vid.style.display = "inline";
-            sound("background for ceiling.mp3", true, true, 0.25);
+            sound("resources\\background for ceiling.mp3", true, true, 0.25);
             const instance = new TypeIt("#demo", {
                 speed: 60,
                 waitUntilVisible: true,

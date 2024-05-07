@@ -36,11 +36,37 @@
     text-align: right;
     color: white;
   }
+  #demostars{
+    position: fixed;
+    /*margin-top: 10px;*
+    margin-left: 70%;*/
+    left:100px;
+    top: 100px;
+    text-align: left;
+    color: white;
+  }
+  #containerain{
+    position: relative;
+    top: -10px;
+    bottom: auto;
+    right: 20px;
+    left: auto;
+  }
+  #containerstars{
+    position: relative;
+    top: -180px;
+    bottom: auto;
+    left: 20px;
+    right: auto;
+  }
   #ceiling{
     background-color: #101010;
   }
   #rain{
     background-color: #16160C;
+  }
+  #sky{
+    background-color: #090b12;
   }
    /* background-color: #555;
     color: white;

@@ -8,16 +8,28 @@
     <div id="anim">
         <video id="vid" autoplay loop width="100%" height="100%">
         
-            <source src="rain.mp4" type="video/mp4"/>
+            <source src="resources\rain.mp4" type="video/mp4"/>
         
           </video>
         </div>
+        <div id="containerain">
+            <div id="demo">
+    
+            </div>
+        </div>
     <div class="container">
-        <button id="start" class="button" onclick="urmom()"><span> Start :) </span></button>
+        <button id="start" class="button" onclick="urmom()"><span> start :) </span></button>
       </div> 
     <div class="intital">
         <button id="back" class="button" onclick="document.location='index.html'"><span> back </span></button>
     </div>
+    <audio volume="1.0">
+        <source id="background" src="thunderstorm.mp3" type="audio/mpeg">
+        <source id="music" src="https://www.youtube.com/watch?v=kaMB6Rw8XzA" type="audio/mpeg">
+      </audio>
+
+<script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.js"></script>
 <script>
     vid.style.display = "none";
     function urmom(){
@@ -25,6 +37,30 @@
             x.style.display = "none";
             var y = document.getElementById("vid");
             vid.style.display = "inline";
+            sound("resources\\thunderstorm.mp3", true, true, 1);
+            const instance = new TypeIt("#demo", {
+                speed: 60,
+                waitUntilVisible: true,
+            })
+            instance
+            .type("there's something so comforting about sitting alone, silent in a rainstorm.<br>")
+            .type("the rain pounds on the ground, the roof, everything around, but you sit warm and dry, inside.<br>")
+            .type("slide open the door and feel the crisp air.<br>")
+            .type("the clear delineation of the outside and the inside, despite the chill of the glass.")
+            .go();
+/*there's something so comforting about sitting alone, silent in a rainstorm. the rain pounds on the ground, the roof, everything around, but you sit warm and dry, inside. slide open the door and feel the crisp air. the clear delineation of the outside and the inside, despite the chill of the glass. 
+*/
+
+    }
+    var x = document.getElementById("background");
+    function sound(name, autoplay, loop, volume){
+            var sound = new Howl({
+                src: [name],
+                autoplay: autoplay,
+                loop: loop,
+                volume: volume,
+            });
+            sound.play();
     }
 
     /*.type("stars have always been an important motif in my life. <br>as a child, my family watched तारे ज़मीन पर, like stars on earth. <br>my mother would always cry at it. <br>how ironic, then, when her own child struggled and fucked up, <br>all she had were anger and harsh words.")
